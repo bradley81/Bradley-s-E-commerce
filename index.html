@@ -10,7 +10,35 @@
  	<link rel="shortcut icon" href="images/shortcut.ico" type="image/x-icon">
 </head>
 <body>
+	<script type="text/javascript">
+		var people = "娟姐,Naoki,歐陽,雪莉,元傑,允中,子騫,純瑩,春蓉,郡儀";
+		var peopleget = people.split(",");
+		var num =peopleget.length-1;
+		var timer;
+		function change(){
+			document.getElementById("tt").innerHTML = peopleget[GetRnd(0,num)]; //取得亂數
+		}
+
+		function start(){
+			clearInterval(timer);
+			timer = setInterval('change()',10);
+		}
+
+		function ok(){
+			clearInterval(timer);
+			document.getElementById("showresult").value = document.getElementById("tt").innerText;
+		}
+
+		function GetRnd(min,max){
+			return parseInt(Math.random()*(max-min+1));
+		}
+
+	</script>
 	<a href="index.html"><h1>Bradley's E-commerce(網路投保真方便)</h1></a>
 	<div class="line1"></div>
+	<div class="tt">請點擊開始抽獎</div>
+	<button onClick="start()">開始抽獎</button>
+	<button onClick="ok()">停止</button>
+	<input type="text" id="showresult" value="">
 </body>
 </html>
