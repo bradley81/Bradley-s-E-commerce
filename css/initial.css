@@ -2,7 +2,10 @@
 body{
 	margin: 0;
 	padding: 0;
-	background-color: yellow;
+	background: linear-gradient(42deg, rgba(255, 123, 86, 1)27%, rgba(255, 255, 66, 1)70%); 
+    background: -moz-linear-gradient(42deg, rgba(255, 123, 86, 1)27%, rgba(255, 255, 66, 1)70%); 
+    background: -webkit-linear-gradient(42deg, rgba(255, 123, 86, 1)27%, rgba(255, 255, 66, 1)70%); 
+    background: -o-linear-gradient(42deg, rgba(255, 123, 86, 1)27%, rgba(255, 255, 66, 1)70%); 
 }
 
 img{
@@ -18,6 +21,10 @@ h1{
 	z-index: 10;
 }
 
+h1:hover{
+	color: lightblue;
+}
+
 a{
 	text-decoration: none;
 }
@@ -27,4 +34,24 @@ a{
 	width: 100%;
 	height: 80px;
 	background-color: black;
+}
+
+.no1{
+	position: relative;
+	width: 100%;
+	display: block;
+	background-color: red;
+	z-index: 11;
+	color: white;
+	align-self: center;
+}
+
+.no2{
+	position: relative;
+	width: 30%;
+	display: inline-block;
+	background-color: black;
+	z-index: 11;
+	color: white;
+	align-self: center;
 }
